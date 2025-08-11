@@ -3,4 +3,32 @@
   * {
     font-size: 16px;
   }
+
+  .setting {
+    display: block;
+  }
+
+  .setting.ex {
+    margin-top: 2px;
+  }
+
+  .setting .name {
+    width: auto;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .setting .value-container {
+    gap: 4px;
+  }
+
+  .setting .value {
+    min-width: 26px;
+  }
+
+  .result .name {
+    width: auto;
+    margin-right: 0;
+    text-align: left;
+  }
 }
