@@ -8,6 +8,7 @@ const app = {
             remainingPP: 8,
             damage: 0,
             log: "",
+            useSECarbuncle: false,
         }
     },
     created() {
@@ -16,6 +17,14 @@ const app = {
     computed: {
         ppMeter() {
             return `${this.remainingPP} / ${this.maxPP}`;
+        },
+        damageText() {
+            if (this.useSECarbuncle) {
+                return `${this.damage} or ${this.damage + 1}`;
+            }
+            else {
+                return `${this.damage}`;
+            }
         }
     },
     methods: {
@@ -28,6 +37,7 @@ const app = {
             combo = 0;
             this.damage = 0;
             this.log = "";
+            this.useSECarbuncle = false;
         },
         onClickCard(card) {
             combo += 1;
@@ -40,6 +50,7 @@ const app = {
 
             if (card === "超🐿️") {
                 this.remainingPP += 1;
+                this.useSECarbuncle = true;
             }
             else if (card === "🪳") {
                 this.remainingPP -= 3;
