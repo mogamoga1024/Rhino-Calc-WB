@@ -2,8 +2,11 @@
 const app = {
     data() {
         return {
-            // noop
+            maxPP: 8,
         }
+    },
+    created() {
+        // noop
     },
     computed: {
         // noop
