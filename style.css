@@ -13,7 +13,7 @@ h1 {
 }
 
 #setting-container {
-  margin-top: 16px;
+  /*  */
 }
 
 .setting {
@@ -53,6 +53,26 @@ h1 {
 }
 
 #result-container {
-  margin-top: 16px;
+  /*  */
+}
+
+.result {
+  display: flex;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.result:first-of-type {
+  margin-top: 0px;
+}
+
+.result .name {
+  width: 137px;
+  margin-right: 8px;
+  text-align: right;
+}
+
+#memo {
+  font-size: 0.8rem;
 }
 
