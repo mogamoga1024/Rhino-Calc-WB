@@ -1,4 +1,6 @@
 
+let combo = 0;
+
 const app = {
     data() {
         return {
@@ -23,11 +25,33 @@ const app = {
         onClickMaxPP(pp) {
             this.maxPP = pp;
             this.remainingPP = this.maxPP;
+            combo = 0;
             this.damage = 0;
             this.log = "";
         },
         onClickCard(card) {
-            // todo
+            combo += 1;
+            if (this.log === "") {
+                this.log += card;
+            }
+            else {
+                this.log += ` ${card}`;
+            }
+
+            if (card === "超🐿️") {
+                this.remainingPP += 1;
+            }
+            else if (card === "🪳") {
+                this.remainingPP -= 3;
+                this.damage += combo;
+            }
+            else if (card === "超🪳") {
+                this.remainingPP -= 3;
+                this.damage += combo + 3;
+            }
+            else {
+                this.remainingPP -= card;
+            }
         }
     },
 };
