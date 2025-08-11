@@ -12,7 +12,9 @@ const app = {
         // noop
     },
     methods: {
-        // noop
+        onClickMaxPP(pp) {
+            this.maxPP = pp;
+        }
     },
 };
 

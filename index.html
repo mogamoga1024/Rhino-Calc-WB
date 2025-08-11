@@ -22,7 +22,11 @@
         <div class="name">最大PP：</div>
         <div class="value-container">
           <template v-for="pp in [6, 7, 8, 9, 10, 11]">
-            <div class="value" :class="{'selected': pp === maxPP}">{{pp}}</div>
+            <div class="value"
+                 :class="{'selected': pp === maxPP}"
+                 @click="onClickMaxPP(pp)">
+              {{pp}}
+            </div>
           </template>
         </div>
       </div>
