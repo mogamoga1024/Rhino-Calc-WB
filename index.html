@@ -13,7 +13,7 @@
 </head>
 <body>
   <div id="app">
-    <h1>リノ算ツール【シャドバWB】</h1>
+    <h1 @click="onClickClear">リノ算ツール【シャドバWB】</h1>
 
     <hr>
 
@@ -34,15 +34,15 @@
         <div class="name">プレイ：</div>
         <div class="value-container">
           <template v-for="cost in [0, 1, 2, 3, 4]">
-            <div class="value">{{cost}}</div>
+            <div class="value" @click="onClickCard(cost)">{{cost}}</div>
           </template>
         </div>
       </div>
       <div class="setting">
         <div class="name"></div>
         <div class="value-container">
-          <template v-for="name in ['SE🐿️', '🪳', 'SE🪳']">
-            <div class="value">{{name}}</div>
+          <template v-for="name in ['超🐿️', '🪳', '超🪳']">
+            <div class="value" @click="onClickCard(name)">{{name}}</div>
           </template>
         </div>
       </div>
@@ -53,15 +53,15 @@
     <div id="result-container">
       <div class="result">
         <div class="name">PP：</div>
-        <div class="value">0 / 10</div>
+        <div class="value">{{ppMeter}}</div>
       </div>
       <div class="result">
         <div class="name">ダメ：</div>
-        <div class="value">18</div>
+        <div class="value">{{damage}}</div>
       </div>
       <div class="result">
         <div class="name">ログ：</div>
-        <div class="value">0 0 0 1 1 2 🪳 SE🐿️ 🪳</div>
+        <div class="value">{{log}}</div>
       </div>
     </div>
 
