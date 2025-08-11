@@ -52,6 +52,15 @@ h1 {
   transition: box-shadow 0.2s ease;
 }
 
+.setting .value.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  background-color: #f0f0f0;
+  color: #888;
+  pointer-events: none;
+}
+
 .setting .value:hover {
   background-color: #81c784;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);

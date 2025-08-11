@@ -9,6 +9,7 @@ const app = {
             damage: 0,
             log: "",
             useSECarbuncle: false,
+            useSEP: false,
         }
     },
     created() {
@@ -38,6 +39,7 @@ const app = {
             this.damage = 0;
             this.log = "";
             this.useSECarbuncle = false;
+            this.useSEP = false;
         },
         onClickCard(card) {
             combo += 1;
@@ -51,6 +53,7 @@ const app = {
             if (card === "超🐿️") {
                 this.remainingPP += 1;
                 this.useSECarbuncle = true;
+                this.useSEP = true;
             }
             else if (card === "🪳") {
                 this.remainingPP -= 3;
@@ -59,6 +62,7 @@ const app = {
             else if (card === "超🪳") {
                 this.remainingPP -= 3;
                 this.damage += combo + 3;
+                this.useSEP = true;
             }
             else {
                 this.remainingPP -= card;

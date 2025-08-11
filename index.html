@@ -34,15 +34,23 @@
         <div class="name">プレイ：</div>
         <div class="value-container">
           <template v-for="cost in [0, 1, 2, 3, 4]">
-            <div class="value" @click="onClickCard(cost)">{{cost}}</div>
+            <div class="value"
+                 :class="{'disabled': remainingPP < cost}"
+                 @click="onClickCard(cost)">
+              {{cost}}
+            </div>
           </template>
         </div>
       </div>
       <div class="setting">
         <div class="name"></div>
         <div class="value-container">
-          <template v-for="name in ['超🐿️', '🪳', '超🪳']">
-            <div class="value" @click="onClickCard(name)">{{name}}</div>
+          <template v-for="[name, cost] in [['超🐿️', 2], ['🪳', 3], ['超🪳', 3]]">
+            <div class="value"
+                 :class="{'disabled': (remainingPP < cost) || (name[0] === '超' && useSEP)}"
+                 @click="onClickCard(name)">
+              {{name}}
+            </div>
           </template>
         </div>
       </div>
