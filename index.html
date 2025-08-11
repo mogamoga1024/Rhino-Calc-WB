@@ -8,20 +8,49 @@
   <link rel="stylesheet" href="https://unpkg.com/modern-css-reset@1.4.0/dist/reset.min.css"/>
   <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.5.18/dist/vue.global.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/viewport-extra@1.0.3/dist/viewport-extra.min.js"></script>
+  <script>new ViewportExtra(375)</script>
 </head>
 <body>
   <div id="app">
     <h1>リノ算ツール【シャドバWB】</h1>
+
     <div id="setting-container">
       <div class="setting">
         <div class="name">最大PP：</div>
-        <div class="value">6</div>
-        <div class="value">7</div>
-        <div class="value">8</div>
-        <div class="value">9</div>
-        <div class="value">10</div>
-        <div class="value">11</div>
+        <div class="value-container">
+          <div class="value">6</div>
+          <div class="value">7</div>
+          <div class="value">8</div>
+          <div class="value">9</div>
+          <div class="value">10</div>
+          <div class="value">11</div>
+        </div>
       </div>
+      <div class="setting">
+        <div class="name">プレイ：</div>
+        <div class="value-container">
+          <div class="value">0</div>
+          <div class="value">1</div>
+          <div class="value">2</div>
+          <div class="value">3</div>
+          <div class="value">4</div>
+        </div>
+      </div>
+      <div class="setting">
+        <div class="name"></div>
+        <div class="value-container">
+          <div class="value">超カバン</div>
+          <div class="value">リノ</div>
+          <div class="value">超リノ</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="result-container">
+      PP：0/10
+      ダメ：0
+      ログ：0 0 1 2
     </div>
   </div>
 
